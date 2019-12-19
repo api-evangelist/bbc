@@ -1,0 +1,63 @@
+{
+    "name": "BBC",
+    "description": "Breaking news, sport, TV, radio and a whole lot more. The BBC informs, educates and entertains - wherever you are, whatever your age.",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28554-bbc-nitro.jpg",
+    "tags": [
+        "api provider",
+        "broadcasts",
+        "general data",
+        "have api",
+        "historical data api"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/bbc\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "BBC Nitro",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28554-bbc-nitro.jpg",
+            "humanURL": "http:\/\/www.bbc.com\/",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/bbc-nitro.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/bbc-nitro-openapi.json"
+                },
+                {
+                    "type": "x-postman-collecction",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/bbc-nitro-postman-collection.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Crunchbase",
+            "url": "https:\/\/crunchbase.com\/organization\/bbc-news"
+        },
+        {
+            "type": "Email",
+            "url": "dataprotection@bbc.com"
+        },
+        {
+            "type": "Email",
+            "url": "bbcworldwidelearning@bbc.com"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/BBCNews"
+        },
+        {
+            "type": "Website",
+            "url": "http:\/\/www.bbc.com\/"
+        }
+    ]
+}
