@@ -1,0 +1,2102 @@
+{
+    "id": "c6b949d52e5b913222b3ade966e5a720",
+    "name": "BBC Nitro",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "215bcb13460fa3d84e8e84d0f8238fe3",
+            "name": "Get API definition",
+            "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/",
+            "description": "Get API definition",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "rawModeData": ""
+        },
+        {
+            "id": "d65737e1e692a45cd40c752570e5f074",
+            "name": "Discover details of on-demand availability for programmes and their versions",
+            "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/availabilities",
+            "description": "Discover details of on-demand availability for programmes and their versions",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "sort",
+                    "description": "Sorts:\n* scheduled_start: sort chronologically by scheduled start time\/date, ascending\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sort_direction",
+                    "description": "Sort direction",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "availability",
+                    "description": "filter for subset of availabilities",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "descendants_of",
+                    "description": "filter for subset of availabilities that have PID as ancestor",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "media_set",
+                    "description": "filter for subset of availabilities with media set",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page",
+                    "description": "which page of results to return",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page_size",
+                    "description": "number of results in each page",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "territory",
+                    "description": "filter for availabilities in given territory",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "debug",
+                    "description": "Turn on debug information (undocumented)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "rawModeData": ""
+        },
+        {
+            "id": "cfb196b7a855955b3f63f12b1ac32346",
+            "name": "Build schedules and find metadata for TV and radio broadcasts",
+            "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/broadcasts",
+            "description": "Fetch metadata about linear Broadcasts and Services, allowing the generation of Television and Radio schedules and other datasets for broadcast items. Use \/schedules instead of this feed as it is more efficient. Broadcasts will be deprecated in the future.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "sort",
+                    "description": "Sorts:\n* scheduled_start: sort chronologically by scheduled start time\/date, ascending\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sort_direction",
+                    "description": "Sort direction",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "mixin",
+                    "description": "Mixins:\n* titles: return ancestor programme titles\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "authority",
+                    "description": "filter for subset of broadcasts that have given authority",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "descendants_of",
+                    "description": "filter for subset of availabilities that have PID as ancestor",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "end_from",
+                    "description": "filter for subset of broadcasts that end on or later than the specified datetime",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "end_to",
+                    "description": "filter for subset of broadcasts that end on or earlier than the specified datetime",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "format",
+                    "description": "filter for subset of broadcasts that are classified in the given format ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "genre",
+                    "description": "filter for subset of broadcasts that are classified in the given genre ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "id",
+                    "description": "filter for subset of broadcasts that have given identifier",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "item",
+                    "description": "filter for subset of broadcasts with the given item performed on it",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page",
+                    "description": "which page of results to return",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page_size",
+                    "description": "number of results in each page",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "people",
+                    "description": "filter for subset of broadcasts that have given contributor",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "pid",
+                    "description": "filter for subset of broadcasts having given PID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "q",
+                    "description": "filter for subset of broadcasts matching supplied keyword\/phrase (boolean operators permitted)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "schedule_day",
+                    "description": "filter for subset of broadcasts that start on the specified day (BBC time)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "schedule_day_from",
+                    "description": "filter for subset of broadcasts that start on or after the specified day (BBC time)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "schedule_day_to",
+                    "description": "filter for subset of broadcasts that start on or before the specified day (BBC time)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "service_master_brand",
+                    "description": "filter for subset of broadcasts with given service master brand",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sid",
+                    "description": "filter for subset of broadcasts that are on the specified linear service",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "start_from",
+                    "description": "filter for subset of broadcasts that start on or later than the specified datetime",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "start_to",
+                    "description": "filter for subset of broadcasts that start on or earlier than the specified datetime",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "version",
+                    "description": "filter for subset of broadcasts with given PID as their parent version",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "rawModeData": ""
+        },
+        {
+            "id": "38e2a6f0eabfcbb7f6a0c5141ee88c7d",
+            "name": "Find metadata for curated groups: seasons, collections, galleries or franchises",
+            "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/groups",
+            "description": "Long-lived curated collections of programmes and more, including Collections, Seasons, Franchises and Galleries",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "sort",
+                    "description": "Sorts:\n* scheduled_start: sort chronologically by scheduled start time\/date, ascending\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sort_direction",
+                    "description": "Sort direction",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "mixin",
+                    "description": "Mixins:\n* titles: return ancestor programme titles\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "for_descendants_of",
+                    "description": "filter for groups related to given programme or its descendants",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "for_programme",
+                    "description": "filter for subset of groups directly related to a given programme",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "group",
+                    "description": "filter for subset of groups which belong to the given group pid",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "group_type",
+                    "description": "filter for subset of groups that have the given group type",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "member",
+                    "description": "filter for subset of groups which contain an entity with the given pid as a member",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page",
+                    "description": "which page of results to return",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page_size",
+                    "description": "number of results in each page",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "partner_id",
+                    "description": "filter for groups by partner ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "partner_pid",
+                    "description": "filter for groups by partner PID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "pid",
+                    "description": "filter for subset of broadcasts having given PID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "q",
+                    "description": "filter for subset of broadcasts matching supplied keyword\/phrase (boolean operators permitted)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "embargoed",
+                    "description": "Control return of embargoed items (undocumented)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "rawModeData": ""
+        },
+        {
+            "id": "e0d8b4be19c83ee0d0f0465fbb7e001f",
+            "name": "Find metadata for images",
+            "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/images",
+            "description": "Find metadata for images, particularly those in galleries",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "sort",
+                    "description": "Sorts:\n* scheduled_start: sort chronologically by scheduled start time\/date, ascending\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sort_direction",
+                    "description": "Sort direction",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "group",
+                    "description": "filter for subset of groups which belong to the given group pid",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "image_type",
+                    "description": "filter for images by type",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "is_alternate_image_for",
+                    "description": "filter for alternate images by entity PID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "is_image_for",
+                    "description": "filter for images by entity PID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page",
+                    "description": "which page of results to return",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page_size",
+                    "description": "number of results in each page",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "partner_id",
+                    "description": "filter for groups by partner ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "partner_pid",
+                    "description": "filter for groups by partner PID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "pid",
+                    "description": "filter for subset of broadcasts having given PID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "q",
+                    "description": "filter for subset of broadcasts matching supplied keyword\/phrase (boolean operators permitted)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "embargoed",
+                    "description": "Control return of embargoed items (undocumented)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "rawModeData": ""
+        },
+        {
+            "id": "f6519cc60b725034f8e8274cccc00e5e",
+            "name": "Look inside programmes to find segments: chapters, tracks and more",
+            "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/items",
+            "description": "Look inside programmes to find segments: chapters, tracks and more",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "sort",
+                    "description": "Sorts:\n* scheduled_start: sort chronologically by scheduled start time\/date, ascending\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sort_direction",
+                    "description": "Sort direction",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "mixin",
+                    "description": "Mixins:\n* titles: return ancestor programme titles\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "authority",
+                    "description": "filter for subset of broadcasts that have given authority",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "id",
+                    "description": "filter for subset of broadcasts that have given identifier",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "id_type",
+                    "description": "filter for subset of items that have given an ID of the given type",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "item_type",
+                    "description": "filter for specific type(s) of items",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page",
+                    "description": "which page of results to return",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page_size",
+                    "description": "number of results in each page",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "partner_id",
+                    "description": "filter for groups by partner ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "partner_pid",
+                    "description": "filter for groups by partner PID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "people",
+                    "description": "filter for subset of broadcasts that have given contributor",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "pid",
+                    "description": "filter for subset of broadcasts having given PID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "programme",
+                    "description": "filter for subset of items that are part of the given programme",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "q",
+                    "description": "filter for subset of broadcasts matching supplied keyword\/phrase (boolean operators permitted)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "segment_event",
+                    "description": "filter for item with the given segment_event",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "rawModeData": ""
+        },
+        {
+            "id": "c977b71f309bbed338e5885dc96f378f",
+            "name": "List all Master Brands",
+            "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/master_brands",
+            "description": "List all Master Brands",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "sort",
+                    "description": "Sorts:\n* scheduled_start: sort chronologically by scheduled start time\/date, ascending\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sort_direction",
+                    "description": "Sort direction",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "mixin",
+                    "description": "Mixins:\n* titles: return ancestor programme titles\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "mid",
+                    "description": "filter for subset of masterbrands that have given identifier",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page",
+                    "description": "which page of results to return",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page_size",
+                    "description": "number of results in each page",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "partner_id",
+                    "description": "filter for groups by partner ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "partner_pid",
+                    "description": "filter for groups by partner PID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "q",
+                    "description": "filter for subset of broadcasts matching supplied keyword\/phrase (boolean operators permitted)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "rawModeData": ""
+        },
+        {
+            "id": "6bd9a30f2715cf376b4b0155494fabf8",
+            "name": "Find the people behind and in programmes: cast, crew, guests and more",
+            "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/people",
+            "description": "The People feed allows you to search for the people and groups that contribute to programmes. This is the starting point for cast and crew credits, as well as finding contributors using external IDs (such as Wikipedia URLs)",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "authority",
+                    "description": "filter for subset of broadcasts that have given authority",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "has_external_id",
+                    "description": "filter for people who have an external identifier",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "id",
+                    "description": "filter for subset of broadcasts that have given identifier",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "id_type",
+                    "description": "filter for subset of items that have given an ID of the given type",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page",
+                    "description": "which page of results to return",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page_size",
+                    "description": "number of results in each page",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "partner_id",
+                    "description": "filter for groups by partner ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "partner_pid",
+                    "description": "filter for groups by partner PID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "pid",
+                    "description": "filter for subset of broadcasts having given PID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "programme",
+                    "description": "filter for subset of items that are part of the given programme",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "q",
+                    "description": "filter for subset of broadcasts matching supplied keyword\/phrase (boolean operators permitted)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "rawModeData": ""
+        },
+        {
+            "id": "2cf6bb52e4c59b0ba87508e636a993cc",
+            "name": "Look inside pips entities",
+            "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/pips",
+            "description": "Look inside pips entities",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "page",
+                    "description": "which page of results to return",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page_size",
+                    "description": "number of results in each page",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "q",
+                    "description": "filter for subset of broadcasts matching supplied keyword\/phrase (boolean operators permitted)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "rawModeData": ""
+        },
+        {
+            "id": "98a9cd122c78ceb5a0e38d603643962c",
+            "name": "Exposes programme information for a single pid",
+            "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/programme_details",
+            "description": "Exposes programme information for a single pid",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "page",
+                    "description": "which page of results to return",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page_size",
+                    "description": "number of results in each page",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "partner_pid",
+                    "description": "filter for groups by partner PID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "pid",
+                    "description": "filter for subset of broadcasts having given PID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "rawModeData": ""
+        },
+        {
+            "id": "8c3f3c255bd36be26b9ace224045692b",
+            "name": "Start here for programmes metadata: Brands, Series, Episodes and Clips",
+            "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/programmes",
+            "description": "Fetch metadata about Programmes (brands, series, episodes, clips). By applying different filter restrictions this feed can be used in many ways, for example to retrieve all series belonging to a brand, all the episodes and\/or clips for a specific series, or any TLEO objects for a masterbrand. Other filters permit restricting to specific formats and\/or genres, and you can request specific versions (for example Signed or Audio-Described). Parameters may be combined in any way suitable for your app",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "sort",
+                    "description": "Sorts:\n* scheduled_start: sort chronologically by scheduled start time\/date, ascending\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sort_direction",
+                    "description": "Sort direction",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "mixin",
+                    "description": "Mixins:\n* titles: return ancestor programme titles\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "audio_described",
+                    "description": "filter for subset of programmes that are audio-described",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "availability",
+                    "description": "filter for subset of availabilities",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "availability_entity_type",
+                    "description": "additional filter when availability=available",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "availability_from",
+                    "description": "filter for subset of programmes that are available after or at the specified datetime",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "availability_type",
+                    "description": "filter for a subset of programmes that are available for a given type",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "children_of",
+                    "description": "filter for subset of programmes that have PID as immediate parent",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "descendants_of",
+                    "description": "filter for subset of availabilities that have PID as ancestor",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "duration",
+                    "description": "filter for subset of programmes that have given duration",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "entity_type",
+                    "description": "filter for subset of programmes that have given entity type",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "format",
+                    "description": "filter for subset of broadcasts that are classified in the given format ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "genre",
+                    "description": "filter for subset of broadcasts that are classified in the given genre ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "group",
+                    "description": "filter for subset of groups which belong to the given group pid",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "initial_letter",
+                    "description": "filter for subset of programmes with title beginning with initial letter librarian style (ignoring leading 'The', 'An' (Welsh), etc) 0-9 a-z",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "initial_letter_end",
+                    "description": "Programmes with (librarian) titles whose initial letter is equal\/before given letter. Use with initial_letter_start for a range",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "initial_letter_start",
+                    "description": "Programmes with (librarian) titles whose initial letter is equal\/after given letter. Use with initial_letter_end for range.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "initial_letter_strict",
+                    "description": "filter for subset of programmes with title beginning with initial letter",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "item",
+                    "description": "filter for subset of broadcasts with the given item performed on it",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "master_brand",
+                    "description": "filter for subset of programmes with master_brand",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "media_set",
+                    "description": "filter for subset of availabilities with media set",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "media_type",
+                    "description": "filter for subset of programmes with media type",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page",
+                    "description": "which page of results to return",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page_size",
+                    "description": "number of results in each page",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "partner_id",
+                    "description": "filter for groups by partner ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "partner_pid",
+                    "description": "filter for groups by partner PID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "payment_type",
+                    "description": "filter for a subset of programmes that are of the given payment_type",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "people",
+                    "description": "filter for subset of broadcasts that have given contributor",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "pid",
+                    "description": "filter for subset of broadcasts having given PID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "promoted_for",
+                    "description": "filter for subset of programmes which are promoted for given service",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "q",
+                    "description": "filter for subset of broadcasts matching supplied keyword\/phrase (boolean operators permitted)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "signed",
+                    "description": "filter for subset of programmes that are signed",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "tag_name",
+                    "description": "filter for subset of programmes with tag",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "tag_scheme",
+                    "description": "filter for subset of programmes with a tag",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "tleo",
+                    "description": "filter for subset of programmes that are TLEOs",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "version",
+                    "description": "filter for subset of broadcasts with given PID as their parent version",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "embargoed",
+                    "description": "Control return of embargoed items (undocumented)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "rawModeData": ""
+        },
+        {
+            "id": "305da3f601da478e761a060f035b744a",
+            "name": "Discover metadata for content promotions",
+            "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/promotions",
+            "description": "Details of short-term editorially curated \"promotions\", for instance those programmes featured on iPlayer today",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "mixin",
+                    "description": "Mixins:\n* titles: return ancestor programme titles\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "context",
+                    "description": "filter for subset of promotions belonging to a given context",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page",
+                    "description": "which page of results to return",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page_size",
+                    "description": "number of results in each page",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "partner_id",
+                    "description": "filter for groups by partner ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "partner_pid",
+                    "description": "filter for groups by partner PID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "pid",
+                    "description": "filter for subset of broadcasts having given PID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "promoted_by",
+                    "description": "filter for subset of promotions having given promoted by",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "promoted_for",
+                    "description": "filter for subset of programmes which are promoted for given service",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "q",
+                    "description": "filter for subset of broadcasts matching supplied keyword\/phrase (boolean operators permitted)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "status",
+                    "description": "filter for subset of promotions with status",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "rawModeData": ""
+        },
+        {
+            "id": "21e39cec14c753262a9a4771fa366a3f",
+            "name": "Build schedules and find metadata for TV and radio broadcasts and webcasts",
+            "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/schedules",
+            "description": "Dates, Times, Schedules: when and where are programmes being shown?",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "sort",
+                    "description": "Sorts:\n* scheduled_start: sort chronologically by scheduled start time\/date, ascending\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sort_direction",
+                    "description": "Sort direction",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "mixin",
+                    "description": "Mixins:\n* titles: return ancestor programme titles\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "authority",
+                    "description": "filter for subset of broadcasts that have given authority",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "descendants_of",
+                    "description": "filter for subset of availabilities that have PID as ancestor",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "end_from",
+                    "description": "filter for subset of broadcasts that end on or later than the specified datetime",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "end_to",
+                    "description": "filter for subset of broadcasts that end on or earlier than the specified datetime",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "format",
+                    "description": "filter for subset of broadcasts that are classified in the given format ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "genre",
+                    "description": "filter for subset of broadcasts that are classified in the given genre ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "group",
+                    "description": "filter for subset of groups which belong to the given group pid",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "id",
+                    "description": "filter for subset of broadcasts that have given identifier",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "id_type",
+                    "description": "filter for subset of items that have given an ID of the given type",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "item",
+                    "description": "filter for subset of broadcasts with the given item performed on it",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page",
+                    "description": "which page of results to return",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page_size",
+                    "description": "number of results in each page",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "partner_id",
+                    "description": "filter for groups by partner ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "partner_pid",
+                    "description": "filter for groups by partner PID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "people",
+                    "description": "filter for subset of broadcasts that have given contributor",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "pid",
+                    "description": "filter for subset of broadcasts having given PID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "q",
+                    "description": "filter for subset of broadcasts matching supplied keyword\/phrase (boolean operators permitted)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "repeat",
+                    "description": "filter to show either only repeats or non-repeats",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "schedule_day",
+                    "description": "filter for subset of broadcasts that start on the specified day (BBC time)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "schedule_day_from",
+                    "description": "filter for subset of broadcasts that start on or after the specified day (BBC time)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "schedule_day_to",
+                    "description": "filter for subset of broadcasts that start on or before the specified day (BBC time)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "service_master_brand",
+                    "description": "filter for subset of broadcasts with given service master brand",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sid",
+                    "description": "filter for subset of broadcasts that are on the specified linear service",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "start_from",
+                    "description": "filter for subset of broadcasts that start on or later than the specified datetime",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "start_to",
+                    "description": "filter for subset of broadcasts that start on or earlier than the specified datetime",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "version",
+                    "description": "filter for subset of broadcasts with given PID as their parent version",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "rawModeData": ""
+        },
+        {
+            "id": "851b420e3dab26807f4d84ffb778c575",
+            "name": "Get Schema definition",
+            "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/schema",
+            "description": "Get Schema definition",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "rawModeData": ""
+        },
+        {
+            "id": "afb0a5e13e2f7a9fe70f1f9ebb9984db",
+            "name": "Information about the linear services used for broadcast transmissions",
+            "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/services",
+            "description": "The services feed exposes the linear broadcast \"services\" from PIPs. These are the actual services which broadcast programmes (eg bbc_one_oxford is the service for BBC One in Oxford).",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "end_from",
+                    "description": "filter for subset of broadcasts that end on or later than the specified datetime",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "end_to",
+                    "description": "filter for subset of broadcasts that end on or earlier than the specified datetime",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "mid",
+                    "description": "filter for subset of masterbrands that have given identifier",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page",
+                    "description": "which page of results to return",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page_size",
+                    "description": "number of results in each page",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "partner_id",
+                    "description": "filter for groups by partner ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "partner_pid",
+                    "description": "filter for groups by partner PID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "q",
+                    "description": "filter for subset of broadcasts matching supplied keyword\/phrase (boolean operators permitted)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "service_type",
+                    "description": "filter for specified type of linear services",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sid",
+                    "description": "filter for subset of broadcasts that are on the specified linear service",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "start_from",
+                    "description": "filter for subset of broadcasts that start on or later than the specified datetime",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "start_to",
+                    "description": "filter for subset of broadcasts that start on or earlier than the specified datetime",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "rawModeData": ""
+        },
+        {
+            "id": "acb041f645b189a1059e908cafb7282e",
+            "name": "Get raw brand",
+            "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/v1\/brands\/{pid}",
+            "description": "Get raw brand",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "pid",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "rawModeData": ""
+        },
+        {
+            "id": "c70520e17dccfcd016358f03c74d1011",
+            "name": "Get raw brand franchise",
+            "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/v1\/brands\/{pid}\/franchises\/",
+            "description": "Get raw brand franchises",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "pid",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "rawModeData": ""
+        },
+        {
+            "id": "db61933c964c952623f188f7228145b3",
+            "name": "Get raw episode",
+            "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/v1\/episodes\/{pid}",
+            "description": "Get raw episode",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "pid",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "rawModeData": ""
+        },
+        {
+            "id": "8dde209a33eb8cb1ca8dc1c4b231bcce",
+            "name": "Get raw ancestors",
+            "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/v1\/episodes\/{pid}\/ancestors\/",
+            "description": "Get raw ancestors",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "pid",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "rawModeData": ""
+        },
+        {
+            "id": "0b22a122bf99707beb9956dd01f750b4",
+            "name": "Get raw formats",
+            "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/v1\/episodes\/{pid}\/formats\/",
+            "description": "Get raw formats",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "pid",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "rawModeData": ""
+        },
+        {
+            "id": "d7cf85ad38603107d85ee57ec795b36a",
+            "name": "Get raw genre groups",
+            "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/v1\/episodes\/{pid}\/genre_groups\/",
+            "description": "Get raw genre groups",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "pid",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "rawModeData": ""
+        },
+        {
+            "id": "0fb65d079e249d8be9112b87beddf7c3",
+            "name": "Get raw image",
+            "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/v1\/images\/{pid}",
+            "description": "Get raw image",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "pid",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "rawModeData": ""
+        },
+        {
+            "id": "45667bca9e21cca45ae2171730fd69e5",
+            "name": "Get raw masterbrand",
+            "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/v1\/master_brands\/{mbid}",
+            "description": "Get raw masterbrand",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "mbid",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "rawModeData": ""
+        },
+        {
+            "id": "b7beac4e5cf49dc63b1975a5d351536c",
+            "name": "Get raw promotion",
+            "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/v1\/promotions\/{pid}",
+            "description": "Get raw promotion",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "pid",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "rawModeData": ""
+        },
+        {
+            "id": "de21871c457e6b920f11e360652bed69",
+            "name": "Metadata on editorial programme versions: original, signed, audio-described, etc",
+            "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/versions",
+            "description": "The versions feed exposes editorial \"Versions\" of programmes. These are concepts used to capture different presentations of an overall programme: for example, versions of a programme may include one with sign language, one with audio description, one edited for content and more. Versions are also important to understand for broadcasts: a linear broadcast or an ondemand is always of a specific version, not merely of a programme.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "availability",
+                    "description": "filter for subset of availabilities",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "descendants_of",
+                    "description": "filter for subset of availabilities that have PID as ancestor",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "media_set",
+                    "description": "filter for subset of availabilities with media set",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page",
+                    "description": "which page of results to return",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page_size",
+                    "description": "number of results in each page",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "partner_id",
+                    "description": "filter for groups by partner ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "partner_pid",
+                    "description": "filter for groups by partner PID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "payment_type",
+                    "description": "filter for a subset of programmes that are of the given payment_type",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "pid",
+                    "description": "filter for subset of broadcasts having given PID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "embargoed",
+                    "description": "Control return of embargoed items (undocumented)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "rawModeData": ""
+        }
+    ]
+}
