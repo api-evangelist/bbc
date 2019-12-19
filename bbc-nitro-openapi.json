@@ -1,0 +1,2775 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "BBC Nitro",
+        "description": "BBC Nitro is the BBC's application programming interface (API) for BBC Programmes Metadata.",
+        "termsOfService": "http:\/\/www.bbc.co.uk\/terms\/"
+    },
+    "servers": [
+        "httpsprogrammes.api.bbc.com\/nitro\/api"
+    ],
+    "paths": {
+        "\/": {
+            "get": {
+                "summary": "Get API definition",
+                "description": "Get API definition",
+                "operationId": "GetAPI",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/availabilities": {
+            "get": {
+                "summary": "Discover details of on-demand availability for programmes and their versions",
+                "description": "Discover details of on-demand availability for programmes and their versions",
+                "operationId": "ListAvailability",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "description": "Sorts:\n* scheduled_start: sort chronologically by scheduled start time\/date, ascending\n"
+                    },
+                    {
+                        "name": "sort_direction",
+                        "in": "query",
+                        "description": "Sort direction"
+                    },
+                    {
+                        "name": "availability",
+                        "in": "query",
+                        "description": "filter for subset of availabilities"
+                    },
+                    {
+                        "name": "descendants_of",
+                        "in": "query",
+                        "description": "filter for subset of availabilities that have PID as ancestor"
+                    },
+                    {
+                        "name": "media_set",
+                        "in": "query",
+                        "description": "filter for subset of availabilities with media set"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "which page of results to return"
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "description": "number of results in each page"
+                    },
+                    {
+                        "name": "territory",
+                        "in": "query",
+                        "description": "filter for availabilities in given territory"
+                    },
+                    {
+                        "name": "debug",
+                        "in": "query",
+                        "description": "Turn on debug information (undocumented)"
+                    }
+                ]
+            }
+        },
+        "\/broadcasts": {
+            "get": {
+                "summary": "Build schedules and find metadata for TV and radio broadcasts",
+                "description": "Fetch metadata about linear Broadcasts and Services, allowing the generation of Television and Radio schedules and other datasets for broadcast items. Use \/schedules instead of this feed as it is more efficient. Broadcasts will be deprecated in the future.",
+                "operationId": "ListBroadcasts",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "description": "Sorts:\n* scheduled_start: sort chronologically by scheduled start time\/date, ascending\n"
+                    },
+                    {
+                        "name": "sort_direction",
+                        "in": "query",
+                        "description": "Sort direction"
+                    },
+                    {
+                        "name": "mixin",
+                        "in": "query",
+                        "description": "Mixins:\n* titles: return ancestor programme titles\n"
+                    },
+                    {
+                        "name": "authority",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that have given authority"
+                    },
+                    {
+                        "name": "descendants_of",
+                        "in": "query",
+                        "description": "filter for subset of availabilities that have PID as ancestor"
+                    },
+                    {
+                        "name": "end_from",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that end on or later than the specified datetime"
+                    },
+                    {
+                        "name": "end_to",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that end on or earlier than the specified datetime"
+                    },
+                    {
+                        "name": "format",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that are classified in the given format ID"
+                    },
+                    {
+                        "name": "genre",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that are classified in the given genre ID"
+                    },
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that have given identifier"
+                    },
+                    {
+                        "name": "item",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts with the given item performed on it"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "which page of results to return"
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "description": "number of results in each page"
+                    },
+                    {
+                        "name": "people",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that have given contributor"
+                    },
+                    {
+                        "name": "pid",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts having given PID"
+                    },
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts matching supplied keyword\/phrase (boolean operators permitted)"
+                    },
+                    {
+                        "name": "schedule_day",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that start on the specified day (BBC time)"
+                    },
+                    {
+                        "name": "schedule_day_from",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that start on or after the specified day (BBC time)"
+                    },
+                    {
+                        "name": "schedule_day_to",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that start on or before the specified day (BBC time)"
+                    },
+                    {
+                        "name": "service_master_brand",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts with given service master brand"
+                    },
+                    {
+                        "name": "sid",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that are on the specified linear service"
+                    },
+                    {
+                        "name": "start_from",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that start on or later than the specified datetime"
+                    },
+                    {
+                        "name": "start_to",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that start on or earlier than the specified datetime"
+                    },
+                    {
+                        "name": "version",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts with given PID as their parent version"
+                    }
+                ]
+            }
+        },
+        "\/groups": {
+            "get": {
+                "summary": "Find metadata for curated groups: seasons, collections, galleries or franchises",
+                "description": "Long-lived curated collections of programmes and more, including Collections, Seasons, Franchises and Galleries",
+                "operationId": "ListGroups",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "description": "Sorts:\n* scheduled_start: sort chronologically by scheduled start time\/date, ascending\n"
+                    },
+                    {
+                        "name": "sort_direction",
+                        "in": "query",
+                        "description": "Sort direction"
+                    },
+                    {
+                        "name": "mixin",
+                        "in": "query",
+                        "description": "Mixins:\n* titles: return ancestor programme titles\n"
+                    },
+                    {
+                        "name": "for_descendants_of",
+                        "in": "query",
+                        "description": "filter for groups related to given programme or its descendants"
+                    },
+                    {
+                        "name": "for_programme",
+                        "in": "query",
+                        "description": "filter for subset of groups directly related to a given programme"
+                    },
+                    {
+                        "name": "group",
+                        "in": "query",
+                        "description": "filter for subset of groups which belong to the given group pid"
+                    },
+                    {
+                        "name": "group_type",
+                        "in": "query",
+                        "description": "filter for subset of groups that have the given group type"
+                    },
+                    {
+                        "name": "member",
+                        "in": "query",
+                        "description": "filter for subset of groups which contain an entity with the given pid as a member"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "which page of results to return"
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "description": "number of results in each page"
+                    },
+                    {
+                        "name": "partner_id",
+                        "in": "query",
+                        "description": "filter for groups by partner ID"
+                    },
+                    {
+                        "name": "partner_pid",
+                        "in": "query",
+                        "description": "filter for groups by partner PID"
+                    },
+                    {
+                        "name": "pid",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts having given PID"
+                    },
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts matching supplied keyword\/phrase (boolean operators permitted)"
+                    },
+                    {
+                        "name": "embargoed",
+                        "in": "query",
+                        "description": "Control return of embargoed items (undocumented)"
+                    }
+                ]
+            }
+        },
+        "\/images": {
+            "get": {
+                "summary": "Find metadata for images",
+                "description": "Find metadata for images, particularly those in galleries",
+                "operationId": "ListImages",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "description": "Sorts:\n* scheduled_start: sort chronologically by scheduled start time\/date, ascending\n"
+                    },
+                    {
+                        "name": "sort_direction",
+                        "in": "query",
+                        "description": "Sort direction"
+                    },
+                    {
+                        "name": "group",
+                        "in": "query",
+                        "description": "filter for subset of groups which belong to the given group pid"
+                    },
+                    {
+                        "name": "image_type",
+                        "in": "query",
+                        "description": "filter for images by type"
+                    },
+                    {
+                        "name": "is_alternate_image_for",
+                        "in": "query",
+                        "description": "filter for alternate images by entity PID"
+                    },
+                    {
+                        "name": "is_image_for",
+                        "in": "query",
+                        "description": "filter for images by entity PID"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "which page of results to return"
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "description": "number of results in each page"
+                    },
+                    {
+                        "name": "partner_id",
+                        "in": "query",
+                        "description": "filter for groups by partner ID"
+                    },
+                    {
+                        "name": "partner_pid",
+                        "in": "query",
+                        "description": "filter for groups by partner PID"
+                    },
+                    {
+                        "name": "pid",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts having given PID"
+                    },
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts matching supplied keyword\/phrase (boolean operators permitted)"
+                    },
+                    {
+                        "name": "embargoed",
+                        "in": "query",
+                        "description": "Control return of embargoed items (undocumented)"
+                    }
+                ]
+            }
+        },
+        "\/items": {
+            "get": {
+                "summary": "Look inside programmes to find segments: chapters, tracks and more",
+                "description": "Look inside programmes to find segments: chapters, tracks and more",
+                "operationId": "ListItems",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "description": "Sorts:\n* scheduled_start: sort chronologically by scheduled start time\/date, ascending\n"
+                    },
+                    {
+                        "name": "sort_direction",
+                        "in": "query",
+                        "description": "Sort direction"
+                    },
+                    {
+                        "name": "mixin",
+                        "in": "query",
+                        "description": "Mixins:\n* titles: return ancestor programme titles\n"
+                    },
+                    {
+                        "name": "authority",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that have given authority"
+                    },
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that have given identifier"
+                    },
+                    {
+                        "name": "id_type",
+                        "in": "query",
+                        "description": "filter for subset of items that have given an ID of the given type"
+                    },
+                    {
+                        "name": "item_type",
+                        "in": "query",
+                        "description": "filter for specific type(s) of items"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "which page of results to return"
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "description": "number of results in each page"
+                    },
+                    {
+                        "name": "partner_id",
+                        "in": "query",
+                        "description": "filter for groups by partner ID"
+                    },
+                    {
+                        "name": "partner_pid",
+                        "in": "query",
+                        "description": "filter for groups by partner PID"
+                    },
+                    {
+                        "name": "people",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that have given contributor"
+                    },
+                    {
+                        "name": "pid",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts having given PID"
+                    },
+                    {
+                        "name": "programme",
+                        "in": "query",
+                        "description": "filter for subset of items that are part of the given programme"
+                    },
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts matching supplied keyword\/phrase (boolean operators permitted)"
+                    },
+                    {
+                        "name": "segment_event",
+                        "in": "query",
+                        "description": "filter for item with the given segment_event"
+                    }
+                ]
+            }
+        },
+        "\/master_brands": {
+            "get": {
+                "summary": "List all Master Brands",
+                "description": "List all Master Brands",
+                "operationId": "ListMasterbrands",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "description": "Sorts:\n* scheduled_start: sort chronologically by scheduled start time\/date, ascending\n"
+                    },
+                    {
+                        "name": "sort_direction",
+                        "in": "query",
+                        "description": "Sort direction"
+                    },
+                    {
+                        "name": "mixin",
+                        "in": "query",
+                        "description": "Mixins:\n* titles: return ancestor programme titles\n"
+                    },
+                    {
+                        "name": "mid",
+                        "in": "query",
+                        "description": "filter for subset of masterbrands that have given identifier"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "which page of results to return"
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "description": "number of results in each page"
+                    },
+                    {
+                        "name": "partner_id",
+                        "in": "query",
+                        "description": "filter for groups by partner ID"
+                    },
+                    {
+                        "name": "partner_pid",
+                        "in": "query",
+                        "description": "filter for groups by partner PID"
+                    },
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts matching supplied keyword\/phrase (boolean operators permitted)"
+                    }
+                ]
+            }
+        },
+        "\/people": {
+            "get": {
+                "summary": "Find the people behind and in programmes: cast, crew, guests and more",
+                "description": "The People feed allows you to search for the people and groups that contribute to programmes. This is the starting point for cast and crew credits, as well as finding contributors using external IDs (such as Wikipedia URLs)",
+                "operationId": "ListPeople",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "authority",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that have given authority"
+                    },
+                    {
+                        "name": "has_external_id",
+                        "in": "query",
+                        "description": "filter for people who have an external identifier"
+                    },
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that have given identifier"
+                    },
+                    {
+                        "name": "id_type",
+                        "in": "query",
+                        "description": "filter for subset of items that have given an ID of the given type"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "which page of results to return"
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "description": "number of results in each page"
+                    },
+                    {
+                        "name": "partner_id",
+                        "in": "query",
+                        "description": "filter for groups by partner ID"
+                    },
+                    {
+                        "name": "partner_pid",
+                        "in": "query",
+                        "description": "filter for groups by partner PID"
+                    },
+                    {
+                        "name": "pid",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts having given PID"
+                    },
+                    {
+                        "name": "programme",
+                        "in": "query",
+                        "description": "filter for subset of items that are part of the given programme"
+                    },
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts matching supplied keyword\/phrase (boolean operators permitted)"
+                    }
+                ]
+            }
+        },
+        "\/pips": {
+            "get": {
+                "summary": "Look inside pips entities",
+                "description": "Look inside pips entities",
+                "operationId": "ListPips",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "which page of results to return"
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "description": "number of results in each page"
+                    },
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts matching supplied keyword\/phrase (boolean operators permitted)"
+                    }
+                ]
+            }
+        },
+        "\/programme_details": {
+            "get": {
+                "summary": "Exposes programme information for a single pid",
+                "description": "Exposes programme information for a single pid",
+                "operationId": "ListProgrammeDetails",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "which page of results to return"
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "description": "number of results in each page"
+                    },
+                    {
+                        "name": "partner_pid",
+                        "in": "query",
+                        "description": "filter for groups by partner PID"
+                    },
+                    {
+                        "name": "pid",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts having given PID"
+                    }
+                ]
+            }
+        },
+        "\/programmes": {
+            "get": {
+                "summary": "Start here for programmes metadata: Brands, Series, Episodes and Clips",
+                "description": "Fetch metadata about Programmes (brands, series, episodes, clips). By applying different filter restrictions this feed can be used in many ways, for example to retrieve all series belonging to a brand, all the episodes and\/or clips for a specific series, or any TLEO objects for a masterbrand. Other filters permit restricting to specific formats and\/or genres, and you can request specific versions (for example Signed or Audio-Described). Parameters may be combined in any way suitable for your app",
+                "operationId": "ListProgrammes",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "description": "Sorts:\n* scheduled_start: sort chronologically by scheduled start time\/date, ascending\n"
+                    },
+                    {
+                        "name": "sort_direction",
+                        "in": "query",
+                        "description": "Sort direction"
+                    },
+                    {
+                        "name": "mixin",
+                        "in": "query",
+                        "description": "Mixins:\n* titles: return ancestor programme titles\n"
+                    },
+                    {
+                        "name": "audio_described",
+                        "in": "query",
+                        "description": "filter for subset of programmes that are audio-described"
+                    },
+                    {
+                        "name": "availability",
+                        "in": "query",
+                        "description": "filter for subset of availabilities"
+                    },
+                    {
+                        "name": "availability_entity_type",
+                        "in": "query",
+                        "description": "additional filter when availability=available"
+                    },
+                    {
+                        "name": "availability_from",
+                        "in": "query",
+                        "description": "filter for subset of programmes that are available after or at the specified datetime"
+                    },
+                    {
+                        "name": "availability_type",
+                        "in": "query",
+                        "description": "filter for a subset of programmes that are available for a given type"
+                    },
+                    {
+                        "name": "children_of",
+                        "in": "query",
+                        "description": "filter for subset of programmes that have PID as immediate parent"
+                    },
+                    {
+                        "name": "descendants_of",
+                        "in": "query",
+                        "description": "filter for subset of availabilities that have PID as ancestor"
+                    },
+                    {
+                        "name": "duration",
+                        "in": "query",
+                        "description": "filter for subset of programmes that have given duration"
+                    },
+                    {
+                        "name": "entity_type",
+                        "in": "query",
+                        "description": "filter for subset of programmes that have given entity type"
+                    },
+                    {
+                        "name": "format",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that are classified in the given format ID"
+                    },
+                    {
+                        "name": "genre",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that are classified in the given genre ID"
+                    },
+                    {
+                        "name": "group",
+                        "in": "query",
+                        "description": "filter for subset of groups which belong to the given group pid"
+                    },
+                    {
+                        "name": "initial_letter",
+                        "in": "query",
+                        "description": "filter for subset of programmes with title beginning with initial letter librarian style (ignoring leading 'The', 'An' (Welsh), etc) 0-9 a-z"
+                    },
+                    {
+                        "name": "initial_letter_end",
+                        "in": "query",
+                        "description": "Programmes with (librarian) titles whose initial letter is equal\/before given letter. Use with initial_letter_start for a range"
+                    },
+                    {
+                        "name": "initial_letter_start",
+                        "in": "query",
+                        "description": "Programmes with (librarian) titles whose initial letter is equal\/after given letter. Use with initial_letter_end for range."
+                    },
+                    {
+                        "name": "initial_letter_strict",
+                        "in": "query",
+                        "description": "filter for subset of programmes with title beginning with initial letter"
+                    },
+                    {
+                        "name": "item",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts with the given item performed on it"
+                    },
+                    {
+                        "name": "master_brand",
+                        "in": "query",
+                        "description": "filter for subset of programmes with master_brand"
+                    },
+                    {
+                        "name": "media_set",
+                        "in": "query",
+                        "description": "filter for subset of availabilities with media set"
+                    },
+                    {
+                        "name": "media_type",
+                        "in": "query",
+                        "description": "filter for subset of programmes with media type"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "which page of results to return"
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "description": "number of results in each page"
+                    },
+                    {
+                        "name": "partner_id",
+                        "in": "query",
+                        "description": "filter for groups by partner ID"
+                    },
+                    {
+                        "name": "partner_pid",
+                        "in": "query",
+                        "description": "filter for groups by partner PID"
+                    },
+                    {
+                        "name": "payment_type",
+                        "in": "query",
+                        "description": "filter for a subset of programmes that are of the given payment_type"
+                    },
+                    {
+                        "name": "people",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that have given contributor"
+                    },
+                    {
+                        "name": "pid",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts having given PID"
+                    },
+                    {
+                        "name": "promoted_for",
+                        "in": "query",
+                        "description": "filter for subset of programmes which are promoted for given service"
+                    },
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts matching supplied keyword\/phrase (boolean operators permitted)"
+                    },
+                    {
+                        "name": "signed",
+                        "in": "query",
+                        "description": "filter for subset of programmes that are signed"
+                    },
+                    {
+                        "name": "tag_name",
+                        "in": "query",
+                        "description": "filter for subset of programmes with tag"
+                    },
+                    {
+                        "name": "tag_scheme",
+                        "in": "query",
+                        "description": "filter for subset of programmes with a tag"
+                    },
+                    {
+                        "name": "tleo",
+                        "in": "query",
+                        "description": "filter for subset of programmes that are TLEOs"
+                    },
+                    {
+                        "name": "version",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts with given PID as their parent version"
+                    },
+                    {
+                        "name": "embargoed",
+                        "in": "query",
+                        "description": "Control return of embargoed items (undocumented)"
+                    }
+                ]
+            }
+        },
+        "\/promotions": {
+            "get": {
+                "summary": "Discover metadata for content promotions",
+                "description": "Details of short-term editorially curated \"promotions\", for instance those programmes featured on iPlayer today",
+                "operationId": "ListPromotions",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "mixin",
+                        "in": "query",
+                        "description": "Mixins:\n* titles: return ancestor programme titles\n"
+                    },
+                    {
+                        "name": "context",
+                        "in": "query",
+                        "description": "filter for subset of promotions belonging to a given context"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "which page of results to return"
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "description": "number of results in each page"
+                    },
+                    {
+                        "name": "partner_id",
+                        "in": "query",
+                        "description": "filter for groups by partner ID"
+                    },
+                    {
+                        "name": "partner_pid",
+                        "in": "query",
+                        "description": "filter for groups by partner PID"
+                    },
+                    {
+                        "name": "pid",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts having given PID"
+                    },
+                    {
+                        "name": "promoted_by",
+                        "in": "query",
+                        "description": "filter for subset of promotions having given promoted by"
+                    },
+                    {
+                        "name": "promoted_for",
+                        "in": "query",
+                        "description": "filter for subset of programmes which are promoted for given service"
+                    },
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts matching supplied keyword\/phrase (boolean operators permitted)"
+                    },
+                    {
+                        "name": "status",
+                        "in": "query",
+                        "description": "filter for subset of promotions with status"
+                    }
+                ]
+            }
+        },
+        "\/schedules": {
+            "get": {
+                "summary": "Build schedules and find metadata for TV and radio broadcasts and webcasts",
+                "description": "Dates, Times, Schedules: when and where are programmes being shown?",
+                "operationId": "ListSchedules",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "description": "Sorts:\n* scheduled_start: sort chronologically by scheduled start time\/date, ascending\n"
+                    },
+                    {
+                        "name": "sort_direction",
+                        "in": "query",
+                        "description": "Sort direction"
+                    },
+                    {
+                        "name": "mixin",
+                        "in": "query",
+                        "description": "Mixins:\n* titles: return ancestor programme titles\n"
+                    },
+                    {
+                        "name": "authority",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that have given authority"
+                    },
+                    {
+                        "name": "descendants_of",
+                        "in": "query",
+                        "description": "filter for subset of availabilities that have PID as ancestor"
+                    },
+                    {
+                        "name": "end_from",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that end on or later than the specified datetime"
+                    },
+                    {
+                        "name": "end_to",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that end on or earlier than the specified datetime"
+                    },
+                    {
+                        "name": "format",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that are classified in the given format ID"
+                    },
+                    {
+                        "name": "genre",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that are classified in the given genre ID"
+                    },
+                    {
+                        "name": "group",
+                        "in": "query",
+                        "description": "filter for subset of groups which belong to the given group pid"
+                    },
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that have given identifier"
+                    },
+                    {
+                        "name": "id_type",
+                        "in": "query",
+                        "description": "filter for subset of items that have given an ID of the given type"
+                    },
+                    {
+                        "name": "item",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts with the given item performed on it"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "which page of results to return"
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "description": "number of results in each page"
+                    },
+                    {
+                        "name": "partner_id",
+                        "in": "query",
+                        "description": "filter for groups by partner ID"
+                    },
+                    {
+                        "name": "partner_pid",
+                        "in": "query",
+                        "description": "filter for groups by partner PID"
+                    },
+                    {
+                        "name": "people",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that have given contributor"
+                    },
+                    {
+                        "name": "pid",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts having given PID"
+                    },
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts matching supplied keyword\/phrase (boolean operators permitted)"
+                    },
+                    {
+                        "name": "repeat",
+                        "in": "query",
+                        "description": "filter to show either only repeats or non-repeats"
+                    },
+                    {
+                        "name": "schedule_day",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that start on the specified day (BBC time)"
+                    },
+                    {
+                        "name": "schedule_day_from",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that start on or after the specified day (BBC time)"
+                    },
+                    {
+                        "name": "schedule_day_to",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that start on or before the specified day (BBC time)"
+                    },
+                    {
+                        "name": "service_master_brand",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts with given service master brand"
+                    },
+                    {
+                        "name": "sid",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that are on the specified linear service"
+                    },
+                    {
+                        "name": "start_from",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that start on or later than the specified datetime"
+                    },
+                    {
+                        "name": "start_to",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that start on or earlier than the specified datetime"
+                    },
+                    {
+                        "name": "version",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts with given PID as their parent version"
+                    }
+                ]
+            }
+        },
+        "\/schema": {
+            "get": {
+                "summary": "Get Schema definition",
+                "description": "Get Schema definition",
+                "operationId": "GetXSD",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/services": {
+            "get": {
+                "summary": "Information about the linear services used for broadcast transmissions",
+                "description": "The services feed exposes the linear broadcast \"services\" from PIPs. These are the actual services which broadcast programmes (eg bbc_one_oxford is the service for BBC One in Oxford).",
+                "operationId": "ListServices",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "end_from",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that end on or later than the specified datetime"
+                    },
+                    {
+                        "name": "end_to",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that end on or earlier than the specified datetime"
+                    },
+                    {
+                        "name": "mid",
+                        "in": "query",
+                        "description": "filter for subset of masterbrands that have given identifier"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "which page of results to return"
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "description": "number of results in each page"
+                    },
+                    {
+                        "name": "partner_id",
+                        "in": "query",
+                        "description": "filter for groups by partner ID"
+                    },
+                    {
+                        "name": "partner_pid",
+                        "in": "query",
+                        "description": "filter for groups by partner PID"
+                    },
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts matching supplied keyword\/phrase (boolean operators permitted)"
+                    },
+                    {
+                        "name": "service_type",
+                        "in": "query",
+                        "description": "filter for specified type of linear services"
+                    },
+                    {
+                        "name": "sid",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that are on the specified linear service"
+                    },
+                    {
+                        "name": "start_from",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that start on or later than the specified datetime"
+                    },
+                    {
+                        "name": "start_to",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts that start on or earlier than the specified datetime"
+                    }
+                ]
+            }
+        },
+        "\/v1\/brands\/{pid}": {
+            "get": {
+                "summary": "Get raw brand",
+                "description": "Get raw brand",
+                "operationId": "GetRawBrand",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "pid",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/v1\/brands\/{pid}\/franchises\/": {
+            "get": {
+                "summary": "Get raw brand franchise",
+                "description": "Get raw brand franchises",
+                "operationId": "GetRawBrandFranchises",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "pid",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/v1\/episodes\/{pid}": {
+            "get": {
+                "summary": "Get raw episode",
+                "description": "Get raw episode",
+                "operationId": "GetRawEpisode",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "pid",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/v1\/episodes\/{pid}\/ancestors\/": {
+            "get": {
+                "summary": "Get raw ancestors",
+                "description": "Get raw ancestors",
+                "operationId": "GetRawAncestors",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "pid",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/v1\/episodes\/{pid}\/formats\/": {
+            "get": {
+                "summary": "Get raw formats",
+                "description": "Get raw formats",
+                "operationId": "GetRawFormats",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "pid",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/v1\/episodes\/{pid}\/genre_groups\/": {
+            "get": {
+                "summary": "Get raw genre groups",
+                "description": "Get raw genre groups",
+                "operationId": "GetRawGenreGroups",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "pid",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/v1\/images\/{pid}": {
+            "get": {
+                "summary": "Get raw image",
+                "description": "Get raw image",
+                "operationId": "GetRawImage",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "pid",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/v1\/master_brands\/{mbid}": {
+            "get": {
+                "summary": "Get raw masterbrand",
+                "description": "Get raw masterbrand",
+                "operationId": "GetRawMasterbrand",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "mbid",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/v1\/promotions\/{pid}": {
+            "get": {
+                "summary": "Get raw promotion",
+                "description": "Get raw promotion",
+                "operationId": "GetRawPromotion",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "pid",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/versions": {
+            "get": {
+                "summary": "Metadata on editorial programme versions: original, signed, audio-described, etc",
+                "description": "The versions feed exposes editorial \"Versions\" of programmes. These are concepts used to capture different presentations of an overall programme: for example, versions of a programme may include one with sign language, one with audio description, one edited for content and more. Versions are also important to understand for broadcasts: a linear broadcast or an ondemand is always of a specific version, not merely of a programme.",
+                "operationId": "ListVersions",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "availability",
+                        "in": "query",
+                        "description": "filter for subset of availabilities"
+                    },
+                    {
+                        "name": "descendants_of",
+                        "in": "query",
+                        "description": "filter for subset of availabilities that have PID as ancestor"
+                    },
+                    {
+                        "name": "media_set",
+                        "in": "query",
+                        "description": "filter for subset of availabilities with media set"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "which page of results to return"
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "description": "number of results in each page"
+                    },
+                    {
+                        "name": "partner_id",
+                        "in": "query",
+                        "description": "filter for groups by partner ID"
+                    },
+                    {
+                        "name": "partner_pid",
+                        "in": "query",
+                        "description": "filter for groups by partner PID"
+                    },
+                    {
+                        "name": "payment_type",
+                        "in": "query",
+                        "description": "filter for a subset of programmes that are of the given payment_type"
+                    },
+                    {
+                        "name": "pid",
+                        "in": "query",
+                        "description": "filter for subset of broadcasts having given PID"
+                    },
+                    {
+                        "name": "embargoed",
+                        "in": "query",
+                        "description": "Control return of embargoed items (undocumented)"
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "ErrorModel": {
+                "type": "object",
+                "properties": {
+                    "fault": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "affected_by": {
+                "type": "object",
+                "properties": {
+                    "filter": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "alternate_images_mixin": {
+                "type": "object",
+                "properties": {
+                    "alternate_images": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ancestor_titles": {
+                "type": "object",
+                "properties": {
+                    "brand": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "episode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "series": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ancestors_titles": {
+                "type": "object",
+                "properties": {
+                    "brand": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "episode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "series": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "availability": {
+                "type": "object",
+                "properties": {
+                    "availability_of": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "media_set": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "availability-debug": {
+                "type": "object",
+                "properties": {
+                    "territory": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "availability_mixin": {
+                "type": "object",
+                "properties": {
+                    "availability": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "availability_of": {
+                "type": "object",
+                "properties": {
+                    "href": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "result_type": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "available_media_sets": {
+                "type": "object",
+                "properties": {
+                    "media_sets": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "available_mixins": {
+                "type": "object",
+                "properties": {
+                    "availabilities": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "available_simulcasts": {
+                "type": "object",
+                "properties": {
+                    "available": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "available_versions": {
+                "type": "object",
+                "properties": {
+                    "available": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "available_versions_element": {
+                "type": "object",
+                "properties": {
+                    "version": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "available_versions_media_sets": {
+                "type": "object",
+                "properties": {
+                    "media_sets": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "available_webcasts": {
+                "type": "object",
+                "properties": {
+                    "available": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "brand": {
+                "type": "object"
+            },
+            "broadcast": {
+                "type": "object",
+                "properties": {
+                    "broadcast_of": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "broadcaster": {
+                "type": "object",
+                "properties": {
+                    "href": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "result_type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "clip": {
+                "type": "object"
+            },
+            "context": {
+                "type": "object",
+                "properties": {
+                    "cascades_to_descendants": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "href": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "result_type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "contributions_mixin": {
+                "type": "object",
+                "properties": {
+                    "contributions": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "contributions_mixin_contribution": {
+                "type": "object",
+                "properties": {
+                    "contribution": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "contributions_mixin_contributor": {
+                "type": "object",
+                "properties": {
+                    "contributor": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "contributions_mixin_contributor_name": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "contributor": {
+                "type": "object",
+                "properties": {
+                    "contributor_to": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "href": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "contributor_name": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "contributor_to": {
+                "type": "object",
+                "properties": {
+                    "href": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "result_type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "credits_time": {
+                "type": "object",
+                "properties": {
+                    "squeeze_end": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "squeeze_start": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "data": {
+                "type": "object"
+            },
+            "dateRange": {
+                "type": "object",
+                "properties": {
+                    "end": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "start": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "dependency_on": {
+                "type": "object",
+                "properties": {
+                    "filter": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "value": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "deprecated": {
+                "type": "object",
+                "properties": {
+                    "deprecated_since": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "replaced_by": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "replacement_type": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "deprecationAttributes": {
+                "type": "object",
+                "properties": {
+                    "deprecated": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "deprecated_since": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "replaced_by": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "deprecations": {
+                "type": "object",
+                "properties": {
+                    "deprecated": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "height": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "width": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "episode": {
+                "type": "object"
+            },
+            "error": {
+                "type": "object"
+            },
+            "errors": {
+                "type": "object"
+            },
+            "feed": {
+                "type": "object",
+                "properties": {
+                    "href": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "rel": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "feeds": {
+                "type": "object",
+                "properties": {
+                    "deployment_root": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "feed": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "filter": {
+                "type": "object",
+                "properties": {
+                    "default": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "depends_on": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "deprecated": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "deprecated_since": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "guaranteed_until": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "max_value": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "min_value": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "multiple_values": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "option": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "prefer": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "prohibits": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "replaced_by": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "required": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "filters": {
+                "type": "object",
+                "properties": {
+                    "filter": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "focus_point": {
+                "type": "object",
+                "properties": {
+                    "x": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "y": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "for_programme": {
+                "type": "object",
+                "properties": {
+                    "href": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "for_programmes": {
+                "type": "object",
+                "properties": {
+                    "for_programme": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "format": {
+                "type": "object",
+                "properties": {
+                    "#text": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "format_id": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "genre": {
+                "type": "object",
+                "properties": {
+                    "#text": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "genreGroupingsType": {
+                "type": "object",
+                "properties": {
+                    "genre_group": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "genre_group": {
+                "type": "object",
+                "properties": {
+                    "genres": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "group-body": {
+                "type": "object"
+            },
+            "guidance_warnings": {
+                "type": "object",
+                "properties": {
+                    "warnings": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "id": {
+                "type": "object",
+                "properties": {
+                    "#text": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "authority": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "identifier": {
+                "type": "object",
+                "properties": {
+                    "#text": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "authority": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "identifiers": {
+                "type": "object",
+                "properties": {
+                    "identifier": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ids": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "image": {
+                "type": "object",
+                "properties": {
+                    "author": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "shoot_date": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "template_url": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "image_link": {
+                "type": "object",
+                "properties": {
+                    "image": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "images_mixin": {
+                "type": "object",
+                "properties": {
+                    "images": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "item": {
+                "type": "object",
+                "properties": {
+                    "duration": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "master_brand": {
+                "type": "object",
+                "properties": {
+                    "colour": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "competition_warning": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ident": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "master_brand_date_range": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "synopses": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "url_key": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "master_brand_link": {
+                "type": "object",
+                "properties": {
+                    "master_brand": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "media_profile_group": {
+                "type": "object",
+                "properties": {
+                    "#text": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "context": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "platform": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "territory": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "transport": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "media_profile_groups": {
+                "type": "object",
+                "properties": {
+                    "media_profile_group": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "mixin": {
+                "type": "object",
+                "properties": {
+                    "affected_by": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "dependency_on": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "depends_on": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "deprecated": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "deprecated_since": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "guaranteed_until": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "href": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "prohibits": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "replaced_by": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "mixins": {
+                "type": "object",
+                "properties": {
+                    "mixin": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "most_popular": {
+                "type": "object",
+                "properties": {
+                    "updated_at": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "next": {
+                "type": "object",
+                "properties": {
+                    "href": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "nitro": {
+                "type": "object"
+            },
+            "offset_in": {
+                "type": "object",
+                "properties": {
+                    "href": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "offset": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "position": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "offsets": {
+                "type": "object",
+                "properties": {
+                    "offset_in": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "option": {
+                "type": "object",
+                "properties": {
+                    "href": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "value": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "original_version_duration": {
+                "type": "object",
+                "properties": {
+                    "version": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "pagination": {
+                "type": "object"
+            },
+            "pidReference": {
+                "type": "object",
+                "properties": {
+                    "href": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "position": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "result_type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "play_event": {
+                "type": "object",
+                "properties": {
+                    "offset": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "played_in_links": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "position": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "play_events": {
+                "type": "object",
+                "properties": {
+                    "play_event": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "played_in_links": {
+                "type": "object",
+                "properties": {
+                    "played_in": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "previous": {
+                "type": "object",
+                "properties": {
+                    "href": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "previous_next_mixin": {
+                "type": "object",
+                "properties": {
+                    "previous_next": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "programme_formats": {
+                "type": "object",
+                "properties": {
+                    "format": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "prohibits": {
+                "type": "object",
+                "properties": {
+                    "filter": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "mixin": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "promotion": {
+                "type": "object"
+            },
+            "publication_rights": {
+                "type": "object",
+                "properties": {
+                    "#text": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "context": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "platform": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "territory": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "transport": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "referenceAttributes": {
+                "type": "object",
+                "properties": {
+                    "href": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "result_type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "related_link": {
+                "type": "object",
+                "properties": {
+                    "availability": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "related_links": {
+                "type": "object",
+                "properties": {
+                    "related_link": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "release_date_group": {
+                "type": "object",
+                "properties": {
+                    "release_date": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "release_year": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "release_year_month": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "results": {
+                "type": "object",
+                "properties": {
+                    "more_than": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "page": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "page_size": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "scheduled": {
+                "type": "object",
+                "properties": {
+                    "end": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "start": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "scheduled_publication_rights": {
+                "type": "object",
+                "properties": {
+                    "publication_rights": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "scheduled_time": {
+                "type": "object",
+                "properties": {
+                    "end": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "start": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "series": {
+                "type": "object"
+            },
+            "service": {
+                "type": "object"
+            },
+            "serviceReference": {
+                "type": "object",
+                "properties": {
+                    "href": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "result_type": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "sid": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "size": {
+                "type": "object",
+                "properties": {
+                    "units": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "sort": {
+                "type": "object",
+                "properties": {
+                    "deprecated": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "deprecated_since": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "guaranteed_until": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "is_default": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "replaced_by": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "sort_direction": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "sort_direction": {
+                "type": "object",
+                "properties": {
+                    "href": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "is_default": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "value": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "sorts": {
+                "type": "object",
+                "properties": {
+                    "sort": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "source_asset": {
+                "type": "object",
+                "properties": {
+                    "mime_type": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "synopses": {
+                "type": "object"
+            },
+            "tx_time": {
+                "type": "object",
+                "properties": {
+                    "credits_showing": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "end": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "start": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "types_with_id": {
+                "type": "object",
+                "properties": {
+                    "types": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "unstable_filters": {
+                "type": "object",
+                "properties": {
+                    "filter": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "unstable_mixins": {
+                "type": "object",
+                "properties": {
+                    "mixin": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "unstable_sorts": {
+                "type": "object",
+                "properties": {
+                    "sort": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "version_availability": {
+                "type": "object",
+                "properties": {
+                    "availability": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "version_availability_mixin": {
+                "type": "object",
+                "properties": {
+                    "version": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "version_group": {
+                "type": "object",
+                "properties": {
+                    "version": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "version_types_with_id": {
+                "type": "object",
+                "properties": {
+                    "version_types": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "versions": {
+                "type": "object",
+                "properties": {
+                    "available": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "versions_mixin": {
+                "type": "object",
+                "properties": {
+                    "versions": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "warning": {
+                "type": "object",
+                "properties": {
+                    "#text": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "short_description": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "warning_code": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "warning_items": {
+                "type": "object",
+                "properties": {
+                    "warning": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "warning_text": {
+                "type": "object",
+                "properties": {
+                    "#text": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "length": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "warning_texts": {
+                "type": "object",
+                "properties": {
+                    "warning_text": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "warnings": {
+                "type": "object",
+                "properties": {
+                    "warning": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "warning_text": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "window": {
+                "type": "object",
+                "properties": {
+                    "window_of": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            }
+        }
+    }
+}
