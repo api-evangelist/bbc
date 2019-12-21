@@ -1,5 +1,5 @@
 {
-    "id": "c6b949d52e5b913222b3ade966e5a720",
+    "id": "540a9722158c4a87fe4f18fe498e7a1e",
     "name": "BBC Nitro",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "215bcb13460fa3d84e8e84d0f8238fe3",
+            "id": "67aa4e00ac6a39a664466180a1dec82d",
             "name": "Get API definition",
             "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/",
             "description": "Get API definition",
@@ -29,11 +29,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "collectionId": "540a9722158c4a87fe4f18fe498e7a1e",
             "rawModeData": ""
         },
         {
-            "id": "d65737e1e692a45cd40c752570e5f074",
+            "id": "553ed1d5cc121a3eb637df4d7d58af8b",
             "name": "Discover details of on-demand availability for programmes and their versions",
             "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/availabilities",
             "description": "Discover details of on-demand availability for programmes and their versions",
@@ -116,11 +116,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "collectionId": "540a9722158c4a87fe4f18fe498e7a1e",
             "rawModeData": ""
         },
         {
-            "id": "cfb196b7a855955b3f63f12b1ac32346",
+            "id": "551753f3078ed4423afa22f6ac78b34a",
             "name": "Build schedules and find metadata for TV and radio broadcasts",
             "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/broadcasts",
             "description": "Fetch metadata about linear Broadcasts and Services, allowing the generation of Television and Radio schedules and other datasets for broadcast items. Use \/schedules instead of this feed as it is more efficient. Broadcasts will be deprecated in the future.",
@@ -308,11 +308,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "collectionId": "540a9722158c4a87fe4f18fe498e7a1e",
             "rawModeData": ""
         },
         {
-            "id": "38e2a6f0eabfcbb7f6a0c5141ee88c7d",
+            "id": "425ddbe747754a1e8e1a2d90f91f2074",
             "name": "Find metadata for curated groups: seasons, collections, galleries or franchises",
             "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/groups",
             "description": "Long-lived curated collections of programmes and more, including Collections, Seasons, Franchises and Galleries",
@@ -437,11 +437,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "collectionId": "540a9722158c4a87fe4f18fe498e7a1e",
             "rawModeData": ""
         },
         {
-            "id": "e0d8b4be19c83ee0d0f0465fbb7e001f",
+            "id": "d34b8321a2f77b5435db1c1d8891e494",
             "name": "Find metadata for images",
             "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/images",
             "description": "Find metadata for images, particularly those in galleries",
@@ -552,11 +552,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "collectionId": "540a9722158c4a87fe4f18fe498e7a1e",
             "rawModeData": ""
         },
         {
-            "id": "f6519cc60b725034f8e8274cccc00e5e",
+            "id": "1ac73eb7e7c324a042acc50cbc44be93",
             "name": "Look inside programmes to find segments: chapters, tracks and more",
             "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/items",
             "description": "Look inside programmes to find segments: chapters, tracks and more",
@@ -688,11 +688,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "collectionId": "540a9722158c4a87fe4f18fe498e7a1e",
             "rawModeData": ""
         },
         {
-            "id": "c977b71f309bbed338e5885dc96f378f",
+            "id": "3fe598143543ef5f6b9d1bb7dae77b4b",
             "name": "List all Master Brands",
             "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/master_brands",
             "description": "List all Master Brands",
@@ -775,11 +775,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "collectionId": "540a9722158c4a87fe4f18fe498e7a1e",
             "rawModeData": ""
         },
         {
-            "id": "6bd9a30f2715cf376b4b0155494fabf8",
+            "id": "787e941616ce0f291a53b0d2a9ec4255",
             "name": "Find the people behind and in programmes: cast, crew, guests and more",
             "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/people",
             "description": "The People feed allows you to search for the people and groups that contribute to programmes. This is the starting point for cast and crew credits, as well as finding contributors using external IDs (such as Wikipedia URLs)",
@@ -876,11 +876,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "collectionId": "540a9722158c4a87fe4f18fe498e7a1e",
             "rawModeData": ""
         },
         {
-            "id": "2cf6bb52e4c59b0ba87508e636a993cc",
+            "id": "e6ddeaca2400aaa9a2235fa1ab12d391",
             "name": "Look inside pips entities",
             "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/pips",
             "description": "Look inside pips entities",
@@ -921,11 +921,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "collectionId": "540a9722158c4a87fe4f18fe498e7a1e",
             "rawModeData": ""
         },
         {
-            "id": "98a9cd122c78ceb5a0e38d603643962c",
+            "id": "4e50ce8a0e5f41e652b68a5d74460bb5",
             "name": "Exposes programme information for a single pid",
             "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/programme_details",
             "description": "Exposes programme information for a single pid",
@@ -973,11 +973,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "collectionId": "540a9722158c4a87fe4f18fe498e7a1e",
             "rawModeData": ""
         },
         {
-            "id": "8c3f3c255bd36be26b9ace224045692b",
+            "id": "005197f702df7be358de6fd046faa368",
             "name": "Start here for programmes metadata: Brands, Series, Episodes and Clips",
             "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/programmes",
             "description": "Fetch metadata about Programmes (brands, series, episodes, clips). By applying different filter restrictions this feed can be used in many ways, for example to retrieve all series belonging to a brand, all the episodes and\/or clips for a specific series, or any TLEO objects for a masterbrand. Other filters permit restricting to specific formats and\/or genres, and you can request specific versions (for example Signed or Audio-Described). Parameters may be combined in any way suitable for your app",
@@ -1263,11 +1263,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "collectionId": "540a9722158c4a87fe4f18fe498e7a1e",
             "rawModeData": ""
         },
         {
-            "id": "305da3f601da478e761a060f035b744a",
+            "id": "2b48ce8159ea9e8f9d927d7e4f5580f3",
             "name": "Discover metadata for content promotions",
             "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/promotions",
             "description": "Details of short-term editorially curated \"promotions\", for instance those programmes featured on iPlayer today",
@@ -1364,11 +1364,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "collectionId": "540a9722158c4a87fe4f18fe498e7a1e",
             "rawModeData": ""
         },
         {
-            "id": "21e39cec14c753262a9a4771fa366a3f",
+            "id": "498c5b360398191d2474b0445ddc938f",
             "name": "Build schedules and find metadata for TV and radio broadcasts and webcasts",
             "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/schedules",
             "description": "Dates, Times, Schedules: when and where are programmes being shown?",
@@ -1591,11 +1591,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "collectionId": "540a9722158c4a87fe4f18fe498e7a1e",
             "rawModeData": ""
         },
         {
-            "id": "851b420e3dab26807f4d84ffb778c575",
+            "id": "bfd2508b73abe1d9798f23d20c822b1c",
             "name": "Get Schema definition",
             "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/schema",
             "description": "Get Schema definition",
@@ -1614,11 +1614,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "collectionId": "540a9722158c4a87fe4f18fe498e7a1e",
             "rawModeData": ""
         },
         {
-            "id": "afb0a5e13e2f7a9fe70f1f9ebb9984db",
+            "id": "edcf1cc5406842500b8505230140d92f",
             "name": "Information about the linear services used for broadcast transmissions",
             "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/services",
             "description": "The services feed exposes the linear broadcast \"services\" from PIPs. These are the actual services which broadcast programmes (eg bbc_one_oxford is the service for BBC One in Oxford).",
@@ -1722,11 +1722,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "collectionId": "540a9722158c4a87fe4f18fe498e7a1e",
             "rawModeData": ""
         },
         {
-            "id": "acb041f645b189a1059e908cafb7282e",
+            "id": "9152662dd3ef3802efa2189807907802",
             "name": "Get raw brand",
             "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/v1\/brands\/{pid}",
             "description": "Get raw brand",
@@ -1753,11 +1753,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "collectionId": "540a9722158c4a87fe4f18fe498e7a1e",
             "rawModeData": ""
         },
         {
-            "id": "c70520e17dccfcd016358f03c74d1011",
+            "id": "cf384e545ac4e64eb6b6fb40b2ffa794",
             "name": "Get raw brand franchise",
             "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/v1\/brands\/{pid}\/franchises\/",
             "description": "Get raw brand franchises",
@@ -1784,11 +1784,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "collectionId": "540a9722158c4a87fe4f18fe498e7a1e",
             "rawModeData": ""
         },
         {
-            "id": "db61933c964c952623f188f7228145b3",
+            "id": "d94bd5ab3889f456cc43eedaa51a2c58",
             "name": "Get raw episode",
             "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/v1\/episodes\/{pid}",
             "description": "Get raw episode",
@@ -1815,11 +1815,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "collectionId": "540a9722158c4a87fe4f18fe498e7a1e",
             "rawModeData": ""
         },
         {
-            "id": "8dde209a33eb8cb1ca8dc1c4b231bcce",
+            "id": "847f3367eb83ce09a73995ab071fa2b2",
             "name": "Get raw ancestors",
             "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/v1\/episodes\/{pid}\/ancestors\/",
             "description": "Get raw ancestors",
@@ -1846,11 +1846,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "collectionId": "540a9722158c4a87fe4f18fe498e7a1e",
             "rawModeData": ""
         },
         {
-            "id": "0b22a122bf99707beb9956dd01f750b4",
+            "id": "7beb89869bd6d3683784f4c9f77dd266",
             "name": "Get raw formats",
             "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/v1\/episodes\/{pid}\/formats\/",
             "description": "Get raw formats",
@@ -1877,11 +1877,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "collectionId": "540a9722158c4a87fe4f18fe498e7a1e",
             "rawModeData": ""
         },
         {
-            "id": "d7cf85ad38603107d85ee57ec795b36a",
+            "id": "3ab708ef166c042313458a1596d3c33f",
             "name": "Get raw genre groups",
             "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/v1\/episodes\/{pid}\/genre_groups\/",
             "description": "Get raw genre groups",
@@ -1908,11 +1908,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "collectionId": "540a9722158c4a87fe4f18fe498e7a1e",
             "rawModeData": ""
         },
         {
-            "id": "0fb65d079e249d8be9112b87beddf7c3",
+            "id": "0ac33bc676a546de28d29b6f24b95394",
             "name": "Get raw image",
             "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/v1\/images\/{pid}",
             "description": "Get raw image",
@@ -1939,11 +1939,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "collectionId": "540a9722158c4a87fe4f18fe498e7a1e",
             "rawModeData": ""
         },
         {
-            "id": "45667bca9e21cca45ae2171730fd69e5",
+            "id": "0746cd6fa090478686fffbc0ec3e9ac5",
             "name": "Get raw masterbrand",
             "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/v1\/master_brands\/{mbid}",
             "description": "Get raw masterbrand",
@@ -1970,11 +1970,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "collectionId": "540a9722158c4a87fe4f18fe498e7a1e",
             "rawModeData": ""
         },
         {
-            "id": "b7beac4e5cf49dc63b1975a5d351536c",
+            "id": "154e33f49530c1290f40e4589df01e15",
             "name": "Get raw promotion",
             "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/v1\/promotions\/{pid}",
             "description": "Get raw promotion",
@@ -2001,11 +2001,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "collectionId": "540a9722158c4a87fe4f18fe498e7a1e",
             "rawModeData": ""
         },
         {
-            "id": "de21871c457e6b920f11e360652bed69",
+            "id": "55ff2c889755e53b421af7a6cb995bf4",
             "name": "Metadata on editorial programme versions: original, signed, audio-described, etc",
             "url": "httpsprogrammes.api.bbc.com\/nitro\/api\/versions",
             "description": "The versions feed exposes editorial \"Versions\" of programmes. These are concepts used to capture different presentations of an overall programme: for example, versions of a programme may include one with sign language, one with audio description, one edited for content and more. Versions are also important to understand for broadcasts: a linear broadcast or an ondemand is always of a specific version, not merely of a programme.",
@@ -2095,7 +2095,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c6b949d52e5b913222b3ade966e5a720",
+            "collectionId": "540a9722158c4a87fe4f18fe498e7a1e",
             "rawModeData": ""
         }
     ]
