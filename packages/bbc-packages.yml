@@ -1,0 +1,93 @@
+generated: '2026-09-22'
+method: probed
+generator: harvest-packages.py
+source: registry metadata endpoints (registry.npmjs.org, pypi.org, rubygems.org, api.nuget.org, packagist.org, crates.io) ; github.com/bbc
+ownership_rule: 'official: true only when the registry metadata (homepage, repository, author, URLs) names the provider''s domain (bbc.co.uk,
+  bbc.com, security/bbc-domain-security.yml, security/bbc-vulnerability-disclosure.yml) or its accepted GitHub org (bbc).'
+packages:
+- name: libmpdpp
+  registry: github
+  url: https://github.com/bbc/libmpdpp
+  language: C++
+  official: true
+  version: null
+  published: '2026-09-18'
+  source_repo: https://github.com/bbc/libmpdpp
+  evidence: repository in github.com/bbc, whose profile names the provider's domain
+- name: adhere-lib
+  registry: github
+  url: https://github.com/bbc/adhere-lib
+  language: JavaScript
+  official: true
+  version: null
+  published: '2026-08-25'
+  source_repo: https://github.com/bbc/adhere-lib
+  evidence: repository in github.com/bbc, whose profile names the provider's domain
+- name: rd-apmm-python-lib-mediagrains
+  registry: github
+  url: https://github.com/bbc/rd-apmm-python-lib-mediagrains
+  language: Python
+  official: true
+  version: null
+  published: '2026-07-08'
+  source_repo: https://github.com/bbc/rd-apmm-python-lib-mediagrains
+  evidence: repository in github.com/bbc, whose profile names the provider's domain
+- name: rd-apmm-python-lib-mediajson
+  registry: github
+  url: https://github.com/bbc/rd-apmm-python-lib-mediajson
+  language: Makefile
+  official: true
+  version: null
+  published: '2026-02-23'
+  source_repo: https://github.com/bbc/rd-apmm-python-lib-mediajson
+  evidence: repository in github.com/bbc, whose profile names the provider's domain
+- name: rd-apmm-python-lib-mediatimestamp
+  registry: github
+  url: https://github.com/bbc/rd-apmm-python-lib-mediatimestamp
+  language: Python
+  official: true
+  version: null
+  published: '2026-02-23'
+  source_repo: https://github.com/bbc/rd-apmm-python-lib-mediatimestamp
+  evidence: repository in github.com/bbc, whose profile names the provider's domain
+- name: cdp-cdk-python
+  registry: github
+  url: https://github.com/bbc/cdp-cdk-python
+  language: Python
+  official: true
+  version: null
+  published: '2026-01-07'
+  source_repo: https://github.com/bbc/cdp-cdk-python
+  evidence: repository in github.com/bbc, whose profile names the provider's domain
+- name: bbc
+  registry: npm
+  url: https://www.npmjs.com/package/bbc
+  language: JavaScript
+  official: false
+  version: 0.0.0
+  published: '2016-08-25'
+  evidence: 'name match only: the metadata names neither the provider''s domain nor its GitHub org'
+- name: bbc
+  registry: pypi
+  url: https://pypi.org/project/bbc/
+  language: Python
+  official: false
+  version: 0.1.1
+  published: '2022-02-21'
+  evidence: 'name match only: the metadata names neither the provider''s domain nor its GitHub org'
+- name: bbc
+  registry: rubygems
+  url: https://rubygems.org/gems/bbc
+  language: Ruby
+  official: false
+  version: 0.0.2
+  published: '2010-08-16'
+  evidence: 'name match only: the metadata names neither the provider''s domain nor its GitHub org'
+- name: bbc
+  registry: nuget
+  url: https://www.nuget.org/packages/bbc
+  language: C#
+  official: false
+  version: 0.4.0
+  published: null
+  evidence: 'name match only: the metadata names neither the provider''s domain nor its GitHub org'

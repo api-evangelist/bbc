@@ -1,0 +1,111 @@
+generated: '2026-09-22'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 8
+  own: 3
+  other_domain: 4
+  platform: 1
+  roles:
+  - api
+  - docs
+  - portal
+  - security
+  - source
+  - support
+  - website
+hosts:
+- host: api.bbc.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: bbc.com
+  role: api
+  relation: other-domain
+- host: api.co.uk
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: api.co.uk
+  role: api
+  relation: other-domain
+- host: bbc.co.uk
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  serves:
+  - cdn
+  vendor: fastly
+  registrable_domain: bbc.co.uk
+  role: website
+  relation: own
+- host: developer.bbc.com
+  found_by:
+  - pointer
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  types:
+  - DeveloperPortal
+  serves:
+  - docs
+  registrable_domain: bbc.com
+  role: portal
+  relation: other-domain
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: support.bbc.co.uk
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - well-known
+  types:
+  - Support
+  serves: []
+  registrable_domain: bbc.co.uk
+  role: support
+  relation: own
+- host: www.bbc.co.uk
+  found_by:
+  - pointer
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  types:
+  - Newsroom
+  - Documentation
+  - Blog
+  - TermsOfService
+  - PrivacyPolicy
+  serves:
+  - docs
+  registrable_domain: bbc.co.uk
+  role: docs
+  relation: own
+- host: www.bbc.com
+  found_by:
+  - pointer
+  types:
+  - Security
+  serves: []
+  registrable_domain: bbc.com
+  role: security
+  relation: other-domain

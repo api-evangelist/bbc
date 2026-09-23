@@ -1,23 +1,94 @@
 aid: bbc
+
 name: BBC
-description: 'BBC is a company surfaced via the API Evangelist harvest backlog (source: news) and added
-  to the network as a stub for full-pipeline profiling.'
+
+image: https://static.files.bbci.co.uk/core/website/assets/static/bbc/images/metadata/poster-1024x576.efe9db7f43.png
+
+description: 'The British Broadcasting Corporation (BBC) is the United Kingdom’s public service broadcaster, providing news, television, radio, and online content worldwide. It operates a vast digital platform, offers a range of APIs for developers, and maintains extensive documentation for its services, including news feeds, media assets, and data services. The BBC is a trusted source of information and cultural programming, serving millions of users across the globe.'
+
 url: https://raw.githubusercontent.com/api-evangelist/bbc/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:news
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-22 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-22'
+
 modified: '2026-09-22'
+
 tags:
 - Company
-apis: []
+- Media
+- Broadcasting
+- News
+- Public Service
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: SecurityTxt
+  url: well-known/bbc-www-security.txt
+- type: Security
+  url: https://www.bbc.com/backstage/security-disclosure-policy/
+- type: SecurityTxt
+  url: well-known/bbc-security.txt
+- type: SecurityTxt
+  url: well-known/bbc-bbc-security.txt
+- type: WellKnown
+  url: well-known/bbc-well-known.yml
+- type: Hosts
+  url: hosts/bbc-hosts.yml
+- type: Vendors
+  url: vendors/bbc-vendors.yml
+- type: SDKs
+  url: packages/bbc-packages.yml
+- type: Packages
+  url: packages/bbc-packages.yml
+- type: Support
+  url: https://support.bbc.co.uk/
+- type: Newsroom
+  url: https://www.bbc.co.uk/news
+- type: GitHubOrganization
+  url: https://github.com/bbc
+- type: VulnerabilityDisclosure
+  url: security/bbc-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/bbc-domain-security.yml
 - type: Website
   url: https://bbc.co.uk/
+- type: DeveloperPortal
+  url: https://developer.bbc.com/login-required
+- type: Documentation
+  url: https://www.bbc.co.uk/help
+- type: Blog
+  url: https://www.bbc.co.uk/blogs
+- type: TermsOfService
+  url: https://www.bbc.co.uk/usingthebbc/terms
+- type: PrivacyPolicy
+  url: https://www.bbc.co.uk/usingthebbc/privacy
+
+apis: []
+
+x-coverage:
+  state: gated
+  reason: partner-login
+  detail: Developer portal requires login, blocking access to API documentation.
+  evidence:
+    - url: https://developer.bbc.com/login-required
+      status: 200
+  checked: 2026-09-22
+x-enrichment:
+  date: '2026-09-22'
+  status: enriched
+  artifacts_added: 9
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local

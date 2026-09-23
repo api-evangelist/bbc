@@ -1,0 +1,32 @@
+generated: '2026-09-22'
+method: probed
+source: pre-flight dossier (docs platform, portal detections) + CNAME chains and response headers of the hosts apis.yml names
+registry: all/0-working/vendors.yml
+areas_vocabulary:
+- documentation
+- developer-portal
+- api-gateway
+- cdn
+- hosting
+- sdk-generation
+- api-collections
+- status-page
+- support
+- community
+- identity
+- mcp-hosting
+vendors:
+- vendor: fastly
+  name: Fastly
+  area: cdn
+  host: bbc.co.uk
+  evidence: header:x-served-by:cache-
+  signal: header
+  confidence: high
+  kin_score: []
+checked:
+- 'docs-platform: custom'
+- support.bbc.co.uk (Support)
+- bbc.co.uk (Website)
+- developer.bbc.com (DeveloperPortal)
+- www.bbc.co.uk (Documentation)
