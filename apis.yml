@@ -76,6 +76,10 @@ common:
 - type: PrivacyPolicy
   url: https://www.bbc.co.uk/usingthebbc/privacy
 
+- type: SpectralRules
+  url: https://github.com/bbc/tads/blob/d2b90e52d54db947f4c8ddab571538ed18ab3052/api/.spectral.yaml
+- type: SpectralRules
+  url: https://github.com/bbc/tams/blob/05c2938a2a443cdd550a42cf8c4a432db10af942/api/.spectral.yaml
 apis: []
 
 x-coverage:

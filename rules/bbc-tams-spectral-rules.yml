@@ -1,0 +1,8 @@
+# harvested from https://github.com/bbc/tams/blob/05c2938a2a443cdd550a42cf8c4a432db10af942/api/.spectral.yaml on 2026-10-09 — a Spectral ruleset published in the provider's own GitHub repository (bbc/tams); found by GitHub code search, fetched verbatim
+x-method: harvested
+x-stamped: 2026-10-09
+x-source-url: https://github.com/bbc/tams/blob/05c2938a2a443cdd550a42cf8c4a432db10af942/api/.spectral.yaml
+extends: spectral:oas
+rules:
+  # Reduce severity of unused components: they're needed for docs readability
+  oas3-unused-component: info
