@@ -54,6 +54,29 @@ edges:
     detected: '2026-10-20'
   detected_by: sweep-agent-skills.py
   first_seen: '2026-10-20'
+- partner_name: DVB Project
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://dvb.org/about/members/bbc/
+  category: digital video broadcasting consortium membership
+  contract_reference:
+    register: DVB Project members (dvb.org/membership/, vtm-members data/members.json)
+    standard: DVB
+    spec_file: null
+    role: dvb-member
+    registered_name: BBC
+    register_id: https://dvb.org/about/members/bbc/
+    matched_domain: bbc.co.uk
+    matched_by: domain
+    signal_note: 'participation only: consortium membership'
+    detected_by: sweep-broadcast-tv.py
+    detected: '2026-10-20'
+  detected_by: sweep-broadcast-tv.py
+  first_seen: '2026-10-20'
 generated: '2026-10-18'
 method: searched
 source:
@@ -68,3 +91,10 @@ checked:
 - https://officialskills.sh/sitemap.xml
 - https://skillsmp.com/sitemap.xml
 - https://www.skills.sh/sitemap.xml
+- https://dvb.org/membership/
+- https://www.atsc.org/members/
+- https://www.atsc.org/nextgen-tv/deployments/
+- https://www.hbbtv.org/membership/
+- https://www.hbbtv.org/resource-library/
+- https://www.hbbtv.org/wp-content/uploads/2022/06/List-of-Test-Suite-Licensees-06-2022.pdf
+- https://www.watchnextgentv.com/shop/receivers/

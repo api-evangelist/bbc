@@ -49,3 +49,26 @@
     detected: '2026-10-20'
   status: not-a-workflow
   arazzo: null
+- slug: bbc-dvb-project
+  label: DVB Project
+  partner_name: DVB Project
+  category: digital video broadcasting consortium membership
+  type: register
+  channel: standard-directory
+  evidence: https://dvb.org/about/members/bbc/
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: DVB Project members (dvb.org/membership/, vtm-members data/members.json)
+    standard: DVB
+    spec_file: null
+    role: dvb-member
+    registered_name: BBC
+    register_id: https://dvb.org/about/members/bbc/
+    matched_domain: bbc.co.uk
+    matched_by: domain
+    signal_note: 'participation only: consortium membership'
+    detected_by: sweep-broadcast-tv.py
+    detected: '2026-10-20'
+  status: not-a-workflow
+  arazzo: null
